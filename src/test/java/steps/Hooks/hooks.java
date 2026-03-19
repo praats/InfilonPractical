@@ -14,7 +14,6 @@ public class hooks {
 
     }
 
-
     @After()
     public void afterScenario() {
 

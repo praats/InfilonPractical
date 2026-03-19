@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import pages.CommonPage;
 import utility.Driver;
 
-public class FirstScenario {
+public class Test1_FirstScenario {
 
     WebDriver driver = Driver.getDriver();
     CommonPage commonPage = new CommonPage(driver);
