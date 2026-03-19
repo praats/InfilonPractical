@@ -22,18 +22,20 @@ public class CommonPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    // URL Open
+    // Step 1: URL Open
     public void openURL(String url){
         //url = "https://www.tenforce.com/";
         driver.get(url);
         logger.info("URL Opened");
     }
 
-    // Home Page Title check
+    // Step 2: Home Page Title check
     public void homePageCheck(){
         String homePageTitle = "EHS Software for Safety, Compliance & Operational Risk | TenForce";
         waitUntilTitleCheck(homePageTitle);
         logger.info("Home Page assertion passed");
+
+
 
     }
 

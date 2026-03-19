@@ -24,5 +24,6 @@ o Short explanation of architecture (1–2 paragraphs max)
      - Pages contains locators and actions those used into StepDefinition
      - steps/FirstScenario is test layer where steps and methods are mentioned into it.
 
-Note* - There are still things are there to enhance this framework. 
-   
+Note* - There are still things are there to enhance this framework.
+    - Assertions, I kept on final text match, rest placed, I have used wait method to verified titles.
+    
