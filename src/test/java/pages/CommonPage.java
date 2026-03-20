@@ -46,7 +46,6 @@ public class CommonPage extends BasePage {
         logger.info("Career Page assertion passed");
     }
 
-
     // Career Page: Life at tenforce
     @FindBy (xpath = "//div[contains(@class,'post-content')]//a[contains(text(),'Life at TenForce')]")
     private WebElement life_At_Tenforce;
@@ -57,13 +56,16 @@ public class CommonPage extends BasePage {
         logger.info("Tab clicked correctly");
     }
 
-
     // Step 4: article Open
     @FindBy (xpath = "//span[normalize-space()='Life of two interns']")
     private WebElement internTile;
 
+    @FindBy (xpath = "//span[normalize-space()='Life of two interns']/ancestor::a")
+    private WebElement internalTileBox;
+
     public void articleOpen(){
-        javaScriptToElement(internTile);
+
+        javaScriptToElement(internalTileBox);
         internTile.click();
         logger.info("article opened correctly");
     }

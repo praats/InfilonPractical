@@ -34,6 +34,12 @@ public abstract class BasePage {
         wait.until(ExpectedConditions.titleIs(title));
     }
 
+    public void waitUnilElementPresent(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+
     public void javaScriptFullPageScroll() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
@@ -42,7 +48,10 @@ public abstract class BasePage {
     public void javaScriptToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true)", element);
+
     }
+
+
 
 
     public void navigateBack() {

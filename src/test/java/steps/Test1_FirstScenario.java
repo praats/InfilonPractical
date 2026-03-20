@@ -14,7 +14,6 @@ public class Test1_FirstScenario {
     CommonPage commonPage = new CommonPage(driver);
 
     @Given("I have open URL")
-
     public void i_have_open_url(){
         String url= "https://www.tenforce.com/";
         commonPage.openURL(url);
